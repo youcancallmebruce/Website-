@@ -1,0 +1,68 @@
+.new-collections {
+    display: flex; /* Use flex for a horizontal layout */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Wrap items to the next line when needed */
+    justify-content: space-between; /* Space out the items evenly */
+    width: 100%; /* Ensure it fills the container */
+    max-width: 1200px; /* Set a max width for large screens */
+    gap: 20px; /* Space between items */
+    padding: 0 10px; /* Add horizontal padding for better appearance */
+}
+
+/* For larger screens, show 4 items in a row */
+.item {
+    flex: 0 0 calc(25% - 20px); /* 25% width per item, minus the gap */
+    min-width: 280px; /* Set a minimum width for each item */
+    text-align: center; /* Center content */
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding and border in total width and height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .collections {
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        justify-content: center; /* Center items when wrapping */
+    }
+
+    .item {
+        flex: 0 0 calc(33.33% - 20px); /* Three items per row on medium screens */
+        min-width: 200px; /* Adjust item width for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .new-collections h1 {
+        font-size: 30px; /* Adjust heading size */
+    }
+
+    .new-collections hr {
+        width: 150px; /* Adjust horizontal line width */
+    }
+
+    .item {
+        flex: 0 0 calc(33.33% - 20px); /* Three items per row on mobile screens */
+        min-width: 150px; /* Adjust item width for very small screens */
+    }
+}

@@ -1,0 +1,60 @@
+.item {
+    width: 350px; /* Default width for larger screens */
+}
+
+.item p {
+    margin: 6px 0px;
+}
+
+.item-image {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.item-prices {
+    display: flex;
+    gap: 20px;
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .item {
+        width: 100%; /* Make items full width on mobile */
+        max-width: 350px; /* Optional: Limit max width */
+        margin: 10px 0; /* Add some margin for spacing */
+    }
+
+    .item-image {
+        width: 100%; /* Make the image full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .item-prices {
+        flex-direction: column; /* Stack price elements vertically */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .item-price-new, 
+    .item-price-old {
+        font-size: 16px; /* Reduce font size on mobile */
+    }
+}

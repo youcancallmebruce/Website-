@@ -1,0 +1,162 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Changed to space-between for better layout */
+    align-items: center; /* Align items vertically in the center */
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #FD8B51; /* Add a background color to avoid transparency issues */
+    z-index: 1000; /* Ensure the navbar stays above other elements */
+    width: auto;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #171717;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu li a{
+    color: #171717;
+}
+
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #FF4141;
+}
+
+.nav-login-cart {
+    display: flex;
+    align-items: center; /* Center-align items vertically */
+    gap: 20px; /* Adjusted gap between items */
+}
+
+.nav-login-cart button {
+    width: 157px;
+    height: 58px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+
+.nav-login-cart button:hover {
+    background: white; /* Prevent color change on hover */
+    color: #515151; /* Keep text color the same */
+}
+
+.nav-login-cart button:active {
+    background: #f3f3f3;
+}
+
+
+.nav-cart {
+    position: relative; /* Allow positioning of the count */
+}
+
+.nav-cart img {
+    width: 50px; /* Ensure cart icon is uniform */
+    height: auto;
+}
+
+.nav-cart-count {
+    position: absolute;
+    top: -5px; /* Adjust as needed */
+    right: -10px; /* Adjust as needed */
+    background-color: red; /* Or your preferred color */
+    color: white; /* Text color */
+    border-radius: 50%; /* Makes it circular */
+    width: 20px; /* Adjust size */
+    height: 20px; /* Adjust size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* Adjust font size */
+}
+
+/* Add styles for the mobile menu toggle button */
+.nav-toggle {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column; /* Stack the bars vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.bar {
+    width: 25px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: #171717; /* Color of the bars */
+    margin: 3px 0; /* Space between bars */
+    transition: all 0.3s ease; /* Smooth transition for active state */
+}
+
+.nav-menu.active {
+    display: flex; /* Show menu when active */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center-align menu items */
+        gap: 15px; /* Adjust space between items */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Add padding for spacing */
+        display: none; /* Initially hide the menu */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-toggle {
+        display: flex; /* Show the toggle on mobile */
+    }
+
+    .nav-login-cart {
+        flex-direction: row; /* Keep login and cart items in a row */
+        gap: 15px; /* Space between items */
+    }
+
+    .nav-login-cart button {
+        width: 100%; /* Make button full width on mobile */
+    }
+}
+

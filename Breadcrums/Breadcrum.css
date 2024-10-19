@@ -1,0 +1,28 @@
+.breadcrum{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 60px 170px;
+    text-transform: capitalize;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .breadcrum {
+        margin: 40px 20px; /* Reduce margins for tablet screens */
+        font-size: 14px; /* Slightly reduce font size */
+        gap: 5px; /* Reduce gap between breadcrumb items */
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrum {
+        flex-direction: column; /* Stack breadcrumb items vertically on small screens */
+        margin: 30px 10px; /* Further reduce margins for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
+        gap: 4px; /* Reduce gap between items */
+    }
+}

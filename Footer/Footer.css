@@ -1,0 +1,91 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Reduced gap for better spacing on mobile */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced gap for better spacing on mobile */
+}
+
+.footer-logo p {
+    color: #383838;
+    font-size: 36px; /* Reduced font size for mobile */
+    font-weight: 700;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    list-style: none;
+    gap: 30px; /* Reduced gap for better spacing on mobile */
+    color: #252525;
+    font-size: 16px; /* Reduced font size for mobile */
+    justify-content: center; /* Center the links on smaller screens */
+}
+
+.footer-links li {
+    cursor: pointer;
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 15px; /* Reduced gap for better spacing on mobile */
+}
+
+.footer-icons-container {
+    padding: 10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Reduced gap for better spacing on mobile */
+    width: 100%;
+    margin-bottom: 20px; /* Reduced margin for better spacing on mobile */
+    color: #1a1a1a;
+    font-size: 16px; /* Reduced font size for mobile */
+}
+
+.footer-logo img {
+    width: 40px; /* Reduced logo size for mobile */
+    height: 40px; /* Reduced logo size for mobile */
+}
+
+.footer-icons-container img {
+    width: 24px; /* Reduced social icon size for mobile */
+    height: 24px; /* Reduced social icon size for mobile */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer {
+        gap: 20px; /* Further reduce gap for mobile */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+    }
+
+    .footer-logo p {
+        font-size: 28px; /* Further reduce font size for mobile */
+    }
+
+    .footer-links li {
+        font-size: 14px; /* Further reduce link font size */
+    }
+
+    .footer-copyright {
+        font-size: 14px; /* Further reduce copyright font size */
+    }
+}

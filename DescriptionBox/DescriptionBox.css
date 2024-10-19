@@ -1,0 +1,137 @@
+/* Styles for DescriptionBox */
+.descriptionbox {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #C4D7FF;
+    border-radius: 8px;
+}
+
+.descriptionbox-navigator {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.descriptionbox-nav-box {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.descriptionbox-nav-box.active {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    color: #000;
+}
+
+.descriptionbox-nav-box.fade {
+    opacity: 0.6;
+}
+
+.descriptionbox-content {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.descriptionbox-content h2{
+    margin-bottom: 10px;
+}
+
+
+/* Styles for the review form */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #000;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Styles for the reviews list */
+.reviews-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.review-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.review-item p.rating {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .descriptionbox {
+        width: 90%;
+    }
+
+    input, textarea, select {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

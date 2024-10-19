@@ -1,0 +1,107 @@
+.small-image {
+    width: 400px; /* Default width for larger screens */
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 180px; /* Adjust for mobile */
+    line-height: 1.1;
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 100px; /* Default size for larger screens */
+    font-weight: 700;
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-hand-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 500px; /* Default width for larger screens */
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 22px; /* Default font size for larger screens */
+    font-weight: 500;
+}
+
+/* CSS */
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .small-image {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .hero {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for spacing */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .hero-left {
+        padding-left: 0; /* Remove left padding on mobile */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center text */
+    }
+
+    .hero-left h2 {
+        font-size: 22px; /* Adjust font size for mobile */
+    }
+
+    .hero-left p {
+        font-size: 50px; /* Reduce font size for mobile */
+    }
+
+    .hero-latest-btn {
+        width: 100%; /* Full width on mobile */
+        height: 60px; /* Adjust height for mobile */
+        font-size: 18px; /* Reduce font size for mobile */
+    }
+
+    .arrow-image {
+        width: 40px; /* Adjust arrow image size for mobile */
+        height: 40px; /* Adjust arrow image size for mobile */
+    }
+}
